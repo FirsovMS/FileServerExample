@@ -1,8 +1,13 @@
 package com.company;
 
+import com.company.services.FileWrapper.FileWrapper;
+import com.company.services.dbService.DBService;
+
 public class Main {
+    private static FileWrapper fileWrapper;
 
     public static void main(String[] args) {
-	    // write your code here
+        fileWrapper = FileWrapper.getInstance();
+
     }
 }
