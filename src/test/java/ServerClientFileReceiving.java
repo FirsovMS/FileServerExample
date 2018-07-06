@@ -27,11 +27,11 @@ public class ServerClientFileReceiving {
     }
 
     /**
-     * Test hava a problem : doesn't ending, because server run in another thread
-     * need to
+     * Test hava a problem : doesn't ending, because server run in another thread -> need stoped
+     * @throws InterruptedException 
      */
     @Test
-    public void TestReceivingModulesOnSocket() {
+    public void TestReceivingModulesOnSocket() throws InterruptedException {
         // create server in another thread
         Thread serverThreead = new Thread(() -> {
             try {
@@ -59,7 +59,7 @@ public class ServerClientFileReceiving {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        serverThreead.interrupt();
+        serverThreead.join();
     }
 
     @After

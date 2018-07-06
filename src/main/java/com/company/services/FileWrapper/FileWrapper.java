@@ -1,7 +1,6 @@
 package com.company.services.FileWrapper;
 
 import com.company.services.sockets.FileServer;
-import com.sun.istack.internal.NotNull;
 
 import java.io.File;
 import java.io.IOException;
@@ -31,7 +30,7 @@ public class FileWrapper {
         return instance;
     }
 
-    public void replaceFile(File file, @NotNull String path) throws IOException {
+    public void replaceFile(File file, String path) throws IOException {
         if(vfs.isExist(path)) {
             Files.move(file.toPath(), Paths.get(path), REPLACE_EXISTING);
         }
