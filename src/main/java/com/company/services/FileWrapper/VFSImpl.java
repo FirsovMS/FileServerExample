@@ -27,33 +27,33 @@ public class VFSImpl implements VFS {
 
     @Override
     public byte[] getBytes(String file) {
-        byte[] buffer = new byte[1024];
-        if(!this.isExist(file)) return new byte[] {};
-        InputStream stream = null;
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        try {
-            stream = new FileInputStream(file);
-            int numRead = 0;
-            while ((numRead = stream.read(buffer)) > -1) {
-                outputStream.write(buffer, 0, numRead);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (RuntimeException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                if(stream !=  null) stream.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        try {
-            outputStream.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return outputStream.toByteArray();
+//        byte[] buffer = new byte[1024];
+//        if(!this.isExist(file)) return new byte[] {};
+//        InputStream stream = null;
+//        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+//        try {
+//            stream = new FileInputStream(file);
+//            int numRead = 0;
+//            while ((numRead = stream.read(buffer)) > -1) {
+//                outputStream.write(buffer, 0, numRead);
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        } catch (RuntimeException e) {
+//            e.printStackTrace();
+//        } finally {
+//            try {
+//                if(stream !=  null) stream.close();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//        try {
+//            outputStream.flush();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        return outputStream.toByteArray();
     }
 
     @Override

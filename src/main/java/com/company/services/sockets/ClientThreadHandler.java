@@ -53,6 +53,7 @@ public class ClientThreadHandler implements Runnable{
         dataOutputStream.writeUTF(file.getName());
         dataOutputStream.writeLong(buffer.length);
         dataOutputStream.write(buffer, 0, buffer.length);
+        
         dataOutputStream.flush();
     }
 }

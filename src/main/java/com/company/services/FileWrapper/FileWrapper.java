@@ -15,7 +15,7 @@ import java.util.regex.Pattern;
 import static java.nio.file.StandardCopyOption.*;
 
 public class FileWrapper {
-    public static  FileWrapper instance;
+    private static  FileWrapper instance;
 
     private VFS vfs;
     private String CWD = System.getProperty("user.dir");
