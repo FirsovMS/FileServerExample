@@ -1,11 +1,17 @@
 package com.company.services.sockets;
 
-import com.company.services.FileWrapper.FileWrapper;
-
-import java.io.*;
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.Socket;
-import java.util.List;
 import java.util.Map;
+
+import com.company.services.FileWrapper.FileWrapper;
 
 public class ClientThreadHandler implements Runnable{
     private final Socket clientSocket;

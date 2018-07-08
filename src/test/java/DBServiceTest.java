@@ -1,9 +1,10 @@
-import com.company.services.dbService.DBService;
-import com.company.services.dbService.dataSets.ModulesDataSet;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import com.company.services.dbService.DBService;
+import com.company.services.dbService.dataSets.ModulesDataSet;
 
 public class DBServiceTest {
     private DBService dbService;

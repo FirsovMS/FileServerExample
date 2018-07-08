@@ -1,11 +1,10 @@
 package com.company.services.sockets;
 
-import com.company.services.FileWrapper.FileWrapper;
-
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.logging.Logger;
+
+import com.company.services.FileWrapper.FileWrapper;
 
 public class FileServer {
     private static ServerSocket serverSocket;

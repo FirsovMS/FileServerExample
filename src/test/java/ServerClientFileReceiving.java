@@ -1,20 +1,13 @@
-import com.company.services.FileWrapper.FileWrapper;
-import com.company.services.FileWrapper.VFS;
-import com.company.services.FileWrapper.VFSImpl;
-import com.company.services.sockets.FileClient;
-import com.company.services.sockets.FileServer;
+import java.io.File;
+import java.io.IOException;
+
 import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.nio.ByteBuffer;
-import java.util.*;
-import java.util.zip.CRC32;
+import com.company.services.FileWrapper.FileWrapper;
+import com.company.services.sockets.FileClient;
+import com.company.services.sockets.FileServer;
 
 public class ServerClientFileReceiving {
     private static FileWrapper wrapper;

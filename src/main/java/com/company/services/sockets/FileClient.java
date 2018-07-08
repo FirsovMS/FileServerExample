@@ -1,9 +1,14 @@
 package com.company.services.sockets;
 
-import com.company.services.FileWrapper.FileWrapper;
-
-import java.io.*;
+import java.io.DataInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.PrintStream;
 import java.net.Socket;
+
+import com.company.services.FileWrapper.FileWrapper;
 
 /**
  * This file created for using in Client app

@@ -1,17 +1,18 @@
 package com.company.services.FileWrapper;
 
-import com.company.services.sockets.FileServer;
+import static java.nio.file.StandardCopyOption.REPLACE_EXISTING;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.CopyOption;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import static java.nio.file.StandardCopyOption.*;
 
 public class FileWrapper {
     private static  FileWrapper instance;
