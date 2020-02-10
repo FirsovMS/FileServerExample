@@ -10,6 +10,6 @@ import java.util.Properties;
 public class Main {
     
     public static void main(String[] args) {
-		// Load FileWrapper, Properties, and run ServletServices, SocketService
+		// Load FileWrapper, Properties, and run ServletServices, SocketServic
     }
 }
