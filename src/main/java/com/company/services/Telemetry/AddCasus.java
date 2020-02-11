@@ -1,4 +1,4 @@
-package com.company.services.Telemetry;
+package com.company.Services.Telemetry;
 
 import org.apache.log4j.Logger;
 

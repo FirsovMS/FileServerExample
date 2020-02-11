@@ -1,4 +1,4 @@
-package com.company.services.sockets;
+package com.company.Services.sockets;
 
 import java.io.DataInputStream;
 import java.io.FileOutputStream;
@@ -8,18 +8,22 @@ import java.io.OutputStream;
 import java.io.PrintStream;
 import java.net.Socket;
 
-import com.company.services.FileWrapper.FileWrapper;
+import com.company.Services.FileWrapper.FileWrapper;
 
 /**
  * This file created for using in Client app
  */
 public class FileClient {
+    private static final String host = System.getProperty("server.host");
+    private static final int port = Integer.valueOf(System.getProperty("server.port"));
+    private static final int bufferSize = Integer.valueOf(System.getProperty("server.bufferSize"));
+
     private final FileWrapper fileWrapper;
     private Socket socket;
 
     public FileClient(FileWrapper fileWrapper) throws IOException {
         this.fileWrapper = fileWrapper;
-        socket = new Socket("localhost", 8091);
+        socket = new Socket(host, port);
     }
 
     /**
@@ -36,7 +40,7 @@ public class FileClient {
         DataInputStream dataInputStream = new DataInputStream(inputStream);
         int bytesRead;  // byte counter
         long size = dataInputStream.readLong();
-        byte[] buffer = new byte[1024];
+        byte[] buffer = new byte[bufferSize];
         while (size > 0 && (bytesRead = dataInputStream.read(buffer, 0, (int) Math.min(buffer.length, size))) != -1) {
             outputStream.write(buffer, 0, bytesRead);
             size -= bytesRead;

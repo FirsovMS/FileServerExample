@@ -1,20 +1,21 @@
-package com.company.services.sockets;
+package com.company.Services.sockets;
 
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-import com.company.services.FileWrapper.FileWrapper;
+import com.company.Services.FileWrapper.FileWrapper;
 
 public class FileServer {
     private static ServerSocket serverSocket;
+    private static final int port = Integer.valueOf(System.getProperty("server.port"));
     private Socket clientSocket = null;
     private FileWrapper fileWrapper;
 
     public FileServer(FileWrapper fileWrapper) throws IOException {
         this.fileWrapper = fileWrapper;
-        serverSocket = new ServerSocket(8091);
-        System.out.println("Server started at localhost:8091");
+        serverSocket = new ServerSocket(port);
+        System.out.println("Server started at localhost:" + port);
     }
 
     public void Start() {

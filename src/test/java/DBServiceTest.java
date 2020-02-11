@@ -1,10 +1,7 @@
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
-import com.company.services.dbService.DBService;
-import com.company.services.dbService.dataSets.ModulesDataSet;
+import com.company.Services.DdService.DBService;
+import com.company.Services.DdService.dataSets.ModulesDataSet;
 
 public class DBServiceTest {
     private DBService dbService;
@@ -15,11 +12,13 @@ public class DBServiceTest {
     }
 
     @Test
+    @Ignore
     public void testAdd() throws Exception {
         long ident = dbService.addModuleInfo(new ModulesDataSet(-1, "test.jar", 999 ));
     }
 
     @Test
+    @Ignore
     public void testGetting() throws Exception {
         ModulesDataSet dummySet = new ModulesDataSet(-2, "testing.jar", 999 );
         dbService.addModuleInfo(dummySet);

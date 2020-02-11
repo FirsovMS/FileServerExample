@@ -1,4 +1,4 @@
-package com.company.services.XmlWrapper.sax;
+package com.company.Services.XmlWrapper.sax;
 
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;

@@ -1,4 +1,4 @@
-package com.company.services.FileWrapper;
+package com.company.Services.FileWrapper;
 
 import java.io.IOException;
 import java.util.Iterator;

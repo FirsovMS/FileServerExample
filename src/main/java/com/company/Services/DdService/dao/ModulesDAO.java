@@ -1,6 +1,6 @@
-package com.company.services.dbService.dao;
+package com.company.Services.DdService.dao;
 
-import com.company.services.dbService.dataSets.ModulesDataSet;
+import com.company.Services.DdService.dataSets.ModulesDataSet;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;

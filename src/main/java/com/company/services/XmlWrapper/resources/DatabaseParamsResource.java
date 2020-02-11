@@ -1,4 +1,4 @@
-package com.company.services.XmlWrapper.resources;
+package com.company.Services.XmlWrapper.resources;
 
 @SuppressWarnings("UnusedDeclaration")
 public class DatabaseParamsResource {

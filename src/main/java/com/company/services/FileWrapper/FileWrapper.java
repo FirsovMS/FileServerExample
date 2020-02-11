@@ -1,4 +1,4 @@
-package com.company.services.FileWrapper;
+package com.company.Services.FileWrapper;
 
 import static java.nio.file.StandardCopyOption.REPLACE_EXISTING;
 
@@ -15,13 +15,12 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class FileWrapper {
+    private static final String fileDirectory = System.getProperty("user.dir");
+    private final VFS vfs;
     private static  FileWrapper instance;
 
-    private VFS vfs;
-    private String CWD = System.getProperty("user.dir");
-
     private FileWrapper(){
-        vfs = new VFSImpl(CWD);
+        vfs = new VFSImpl(fileDirectory);
     }
 
     public static FileWrapper getInstance() {

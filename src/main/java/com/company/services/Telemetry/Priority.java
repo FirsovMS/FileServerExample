@@ -1,4 +1,4 @@
-package com.company.services.Telemetry;
+package com.company.Services.Telemetry;
 
 public enum Priority {
     Low,

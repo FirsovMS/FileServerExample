@@ -1,10 +1,10 @@
-package com.company.services.XmlWrapper.sax;
+package com.company.Services.XmlWrapper.sax;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-import com.company.services.XmlWrapper.reflection.ReflectionHelper;
+import com.company.Services.XmlWrapper.reflection.ReflectionHelper;
 
 @SuppressWarnings("UnusedDeclaration")
 public class XmlSAXHandler extends DefaultHandler {

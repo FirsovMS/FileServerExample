@@ -1,4 +1,4 @@
-package com.company.services.XmlWrapper.reflection;
+package com.company.Services.XmlWrapper.reflection;
 
 /**
  * Full description of used types. 

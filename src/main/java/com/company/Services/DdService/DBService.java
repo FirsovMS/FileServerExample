@@ -1,4 +1,4 @@
-package com.company.services.dbService;
+package com.company.Services.DdService;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -13,8 +13,8 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.internal.SessionFactoryImpl;
 import org.hibernate.service.ServiceRegistry;
 
-import com.company.services.dbService.dao.ModulesDAO;
-import com.company.services.dbService.dataSets.ModulesDataSet;
+import com.company.Services.DdService.dao.ModulesDAO;
+import com.company.Services.DdService.dataSets.ModulesDataSet;
 
 public class DBService {
     private SessionFactory sessionFactory;

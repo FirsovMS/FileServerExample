@@ -1,17 +1,15 @@
-package com.company.services.servlets;
+package com.company.Services.servlets;
 
-import java.io.IOException;
-import java.util.List;
+import com.company.Services.DdService.DBException;
+import com.company.Services.DdService.DBService;
+import com.company.Services.DdService.dataSets.ModulesDataSet;
+import com.google.gson.Gson;
 
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import com.company.services.dbService.DBException;
-import com.company.services.dbService.DBService;
-import com.company.services.dbService.dataSets.ModulesDataSet;
-import com.google.gson.Gson;
+import java.io.IOException;
+import java.util.List;
 
 public class ModuleInfoServlet extends HttpServlet {
     private final DBService dbService;
@@ -22,15 +20,15 @@ public class ModuleInfoServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request,
-                          HttpServletResponse response) throws ServletException, IOException {
-        String querry = request.getParameter("querry");
+                          HttpServletResponse response) throws IOException {
+        String query = request.getParameter("query");
 
-         if(querry == null) {
+         if(query == null) {
              response.setContentType("text/html;charset=utf-8");
              response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
          }
          // send all info about modules
-         if(querry == "give_all_modules") {
+         if(query == "give_all_modules") {
              try {
                  List<ModulesDataSet> listOfAllModules = dbService.getModuleInfoAll();
                  Gson gson = new Gson();
